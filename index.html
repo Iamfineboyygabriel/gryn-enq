@@ -7,10 +7,6 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"
     />
-    <link
-      rel="icon"
-      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎓Gryn Index</text></svg>"
-    />
     <style>
       * {
         margin: 0;
@@ -66,7 +62,6 @@
       }
 
       input,
-      textarea,
       select {
         width: 100%;
         padding: 0.8rem;
@@ -77,24 +72,10 @@
       }
 
       input:focus,
-      textarea:focus,
       select:focus {
         outline: none;
         border-color: #660066;
         box-shadow: 0 0 5px rgba(76, 175, 80, 0.2);
-      }
-
-      .social-option {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-      }
-
-      .social-icon {
-        width: 20px;
-        height: 20px;
-        vertical-align: middle;
-        margin-right: 8px;
       }
 
       button {
@@ -136,17 +117,6 @@
         width: 90%;
       }
 
-      .modal-content h3 {
-        color: #660066;
-        margin-bottom: 1rem;
-      }
-
-      .modal-content button {
-        margin-top: 1rem;
-        width: auto;
-        padding: 0.5rem 2rem;
-      }
-
       .iti {
         width: 100%;
       }
@@ -161,42 +131,25 @@
   <body>
     <div class="form-container">
       <div class="logo-space">
-        <img src="./assets/Gryn_Index _logo.svg" alt="logo" />
+        <img src="/assets/Gryn_Index _logo.svg" alt="Logo" />
       </div>
 
       <h2>Contact Us</h2>
 
       <form id="contactForm">
         <div class="form-group">
-          <label for="name">Full Name *</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            required
-            placeholder="Enter your full name"
-          />
+          <label for="fullName">Full Name *</label>
+          <input type="text" id="fullName" name="fullName" required />
         </div>
 
         <div class="form-group">
-          <label for="email">Email Address *</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            required
-            placeholder="Enter your email address"
-          />
+          <label for="email">Email *</label>
+          <input type="email" id="email" name="email" required />
         </div>
 
         <div class="form-group">
-          <label for="phone">Phone Number *</label>
-          <input
-            type="tel"
-            id="phone"
-            name="phone"
-            placeholder="Enter your phone number"
-          />
+          <label for="phoneNumber">Phone Number *</label>
+          <input type="tel" id="phoneNumber" name="phoneNumber" required />
         </div>
 
         <div class="form-group">
@@ -205,7 +158,7 @@
             type="text"
             id="currentLocation"
             name="currentLocation"
-            placeholder="Enter your current location"
+            required
           />
         </div>
 
@@ -215,146 +168,86 @@
             type="text"
             id="desiredLocation"
             name="desiredLocation"
-            placeholder="Enter your desired location"
+            required
           />
         </div>
 
         <div class="form-group">
           <label for="desiredCourse">Desired Course *</label>
-          <input
-            type="text"
-            id="desiredCourse"
-            name="desiredCourse"
-            placeholder="Enter your desired course"
-          />
+          <input type="text" id="desiredCourse" name="desiredCourse" required />
         </div>
 
         <div class="form-group">
-          <label for="education"
-            >What is your highest Educational Qualification *</label
-          >
-          <select id="education" name="education" required>
-            <option value="">Select your highest qualification</option>
+          <label for="highestEducation">Highest Education *</label>
+          <select id="highestEducation" name="highestEducation" required>
+            <option value="">Select highest education</option>
             <option value="high_school">High School Diploma</option>
             <option value="associate">Associate Degree</option>
-            <option value="bachelor">
-              Bachelor's Degree (BSc/BA/BEng/etc.)
-            </option>
-            <option value="master">
-              Master's Degree (MSc/MA/MEng/MBA/etc.)
-            </option>
-            <option value="doctorate">Doctorate Degree (PhD/EdD/etc.)</option>
-            <option value="professional">
-              Professional Degree (MD/JD/etc.)
-            </option>
-            <option value="vocational">
-              Vocational/Technical Certification
-            </option>
+            <option value="bachelor">Bachelor's Degree</option>
+            <option value="master">Master's Degree</option>
+            <option value="doctorate">Doctorate Degree</option>
             <option value="other">Other</option>
           </select>
         </div>
 
         <div class="form-group">
-          <label for="internationalPassport">International Passport *</label>
+          <label for="isInternationalPassport"
+            >International Passport Number *</label
+          >
           <input
             type="text"
-            id="internationalPassport"
-            name="internationalPassport"
+            id="isInternationalPassport"
+            name="isInternationalPassport"
             required
-            placeholder="Enter International Passport Number"
           />
         </div>
 
         <div class="form-group">
-          <label for="sponsor">How will you be sponsoring your study? *</label>
-          <input
-            type="text"
-            id="sponsor"
-            name="sponsor"
-            required
-            placeholder="Enter Sponsor"
-          />
-        </div>
-
-        <div class="form-group">
-          <label for="location">Where is your current location</label>
-          <input
-            type="text"
-            id="location"
-            name="location"
-            required
-            placeholder="Enter location"
-          />
-        </div>
-
-        <div class="form-group">
-          <label for="source">Where did you hear about us? *</label>
-          <select id="source" name="source" required>
-            <option value="">Select source</option>
-            <option value="INSTAGRAM" class="social-option">
-              <img
-                src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/4.25.0/instagram.svg"
-                class="social-icon"
-                alt="Instagram"
-              />
-              Instagram
-            </option>
-            <option value="FACEBOOK" class="social-option">
-              <img
-                src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/4.25.0/facebook.svg"
-                class="social-icon"
-                alt="Facebook"
-              />
-              Facebook
-            </option>
-            <option value="LINKEDIN" class="social-option">
-              <img
-                src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/4.25.0/linkedin.svg"
-                class="social-icon"
-                alt="LinkedIn"
-              />
-              LinkedIn
-            </option>
-            <option value="TWITTER" class="social-option">
-              <img
-                src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/4.25.0/twitter.svg"
-                class="social-icon"
-                alt="Twitter"
-              />
-              Twitter
-            </option>
-            <option value="YOUTUBE" class="social-option">
-              <img
-                src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/4.25.0/youtube.svg"
-                class="social-icon"
-                alt="YouTube"
-              />
-              YouTube
-            </option>
-            <option value="others">Others</option>
+          <label for="sponsor">Sponsor *</label>
+          <select id="sponsor" name="sponsor" required>
+            <option value="">Select sponsor</option>
+            <option value="PARENTS">Parents</option>
+            <option value="YOURSELF">Yourself</option>
+            <option value="RELATIONS">Relations</option>
           </select>
         </div>
 
-        <button type="submit">Send Message</button>
+        <div class="form-group">
+          <label for="hearAboutUs">How did you hear about us? *</label>
+          <select id="hearAboutUs" name="hearAboutUs" required>
+            <option value="">Select source</option>
+            <option value="INSTAGRAM">Instagram</option>
+            <option value="FACEBOOK">Facebook</option>
+            <option value="LINKEDIN">LinkedIn</option>
+            <option value="TWITTER">Twitter</option>
+            <option value="YOUTUBE">YouTube</option>
+            <option value="OTHER">Other</option>
+          </select>
+        </div>
+
+        <button type="submit">Submit</button>
       </form>
     </div>
 
     <div id="successModal" class="modal">
       <div class="modal-content">
         <h3>Success!</h3>
-        <p>Your message has been sent successfully.</p>
+        <p>Your form has been submitted successfully.</p>
         <button onclick="closeModal()">Close</button>
       </div>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
     <script>
-      const phoneInput = window.intlTelInput(document.querySelector("#phone"), {
-        utilsScript:
-          "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
-        separateDialCode: true,
-        preferredCountries: ["ng", "gb", "us"],
-      });
+      const phoneInput = window.intlTelInput(
+        document.querySelector("#phoneNumber"),
+        {
+          utilsScript:
+            "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+          separateDialCode: true,
+          preferredCountries: ["ng", "gb", "us"],
+        }
+      );
 
       document
         .getElementById("contactForm")
@@ -362,9 +255,10 @@
           e.preventDefault();
 
           const formData = new FormData(e.target);
-          const data = Object.fromEntries(formData);
-
-          data.phone = phoneInput.getNumber();
+          const data = {
+            ...Object.fromEntries(formData),
+            phoneNumber: phoneInput.getNumber(),
+          };
 
           try {
             const response = await fetch(
@@ -381,14 +275,12 @@
             if (response.ok) {
               document.getElementById("successModal").style.display = "flex";
               e.target.reset();
-              phoneInput.destroy();
-              phoneInput.init();
             } else {
-              throw new Error("Network response was not ok");
+              throw new Error("Submission failed");
             }
           } catch (error) {
             console.error("Error:", error);
-            alert("There was an error submitting the form. Please try again.");
+            alert("Form submission failed. Please try again.");
           }
         });
 
