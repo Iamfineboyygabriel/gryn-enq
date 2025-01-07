@@ -260,6 +260,9 @@
           const data = {
             ...Object.fromEntries(formData),
             phoneNumber: phoneInput.getNumber(),
+            // Convert isInternationalPassport to actual boolean
+            isInternationalPassport:
+              formData.get("isInternationalPassport") === "true",
           };
 
           try {
