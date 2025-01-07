@@ -179,7 +179,95 @@
       <h2>Contact Us</h2>
 
       <form id="contactForm">
-        <!-- [Previous form fields remain unchanged] -->
+        <div class="form-group">
+          <label for="fullName">Full Name *</label>
+          <input type="text" id="fullName" name="fullName" required />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email *</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+
+        <div class="form-group">
+          <label for="phoneNumber">Phone Number *</label>
+          <input type="tel" id="phoneNumber" name="phoneNumber" required />
+        </div>
+
+        <div class="form-group">
+          <label for="currentLocation">Current Location *</label>
+          <input
+            type="text"
+            id="currentLocation"
+            name="currentLocation"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="desiredLocation">Desired Location *</label>
+          <input
+            type="text"
+            id="desiredLocation"
+            name="desiredLocation"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="desiredCourse">Desired Course *</label>
+          <input type="text" id="desiredCourse" name="desiredCourse" required />
+        </div>
+
+        <div class="form-group">
+          <label for="highestEducation">Highest Education *</label>
+          <select id="highestEducation" name="highestEducation" required>
+            <option value="">Select highest education</option>
+            <option value="high_school">High School Diploma</option>
+            <option value="associate">Associate Degree</option>
+            <option value="bachelor">Bachelor's Degree</option>
+            <option value="master">Master's Degree</option>
+            <option value="doctorate">Doctorate Degree</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="isInternationalPassport"
+            >Do you have an International Passport *</label
+          >
+          <select
+            id="isInternationalPassport"
+            name="isInternationalPassport"
+            required
+          >
+            <option value="true">Yes</option>
+            <option value="false">No</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="sponsor">Sponsor *</label>
+          <select id="sponsor" name="sponsor" required>
+            <option value="">Select sponsor</option>
+            <option value="PARENTS">Parents</option>
+            <option value="YOURSELF">Yourself</option>
+            <option value="RELATIONS">Relations</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="hearAboutUs">How did you hear about us? *</label>
+          <select id="hearAboutUs" name="hearAboutUs" required>
+            <option value="">Select source</option>
+            <option value="INSTAGRAM">Instagram</option>
+            <option value="FACEBOOK">Facebook</option>
+            <option value="LINKEDIN">LinkedIn</option>
+            <option value="TWITTER">Twitter</option>
+            <option value="YOUTUBE">YouTube</option>
+            <option value="OTHER">Other</option>
+          </select>
+        </div>
 
         <button type="submit">
           <div class="spinner"></div>
